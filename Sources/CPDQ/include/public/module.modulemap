@@ -1,0 +1,13 @@
+module CPDQ {
+    umbrella header "pdq.h"
+
+    export *
+    module * { export * }
+
+    // Explicitly declare the C++ module
+    module "C++" {
+        requires cplusplus
+        header "pdq.h"
+        export *
+    }
+}
